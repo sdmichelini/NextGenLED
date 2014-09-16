@@ -85,7 +85,6 @@ bool lastDay,lastNight;
 SYSTEM_MODE(SEMI_AUTOMATIC);
 
 void setup() {
-    WiFi.setCredentials("tkezm-wireless","dE4^&432Mb&*");
     Spark.connect();
     server.begin();
     Spark.function("change", changeStrip);

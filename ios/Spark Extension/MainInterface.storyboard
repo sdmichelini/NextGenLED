@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2rT-jX-cbW"/>
+                        <viewControllerLayoutGuide type="bottom" id="cSu-dj-LLA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="133-9W-nIY">
+                                <rect key="frame" x="12" y="8" width="54" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="Ted-Av-6xk"/>
+                                    <constraint firstAttribute="height" constant="54" id="kky-5l-QWX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Color Pattern:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1N-PG-s2T">
+                                <rect key="frame" x="74" y="8" width="143" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="654-8s-aDo">
+                                <rect key="frame" x="219" y="8" width="85" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="xHw-7g-5gO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-aQ-f58">
+                                <rect key="frame" x="274" y="32" width="30" height="30"/>
+                                <state key="normal" title="Off">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didHitOff:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="N5b-Oi-rap"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmY-9W-DIB">
+                                <rect key="frame" x="74" y="32" width="32" height="30"/>
+                                <state key="normal" title="Auto">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didHitAuto:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="R6Y-ks-lSH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="133-9W-nIY" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="12" id="3VR-Uk-oHb"/>
+                            <constraint firstItem="H1N-PG-s2T" firstAttribute="leading" secondItem="133-9W-nIY" secondAttribute="trailing" constant="8" id="7F0-ot-1Xa"/>
+                            <constraint firstAttribute="trailing" secondItem="654-8s-aDo" secondAttribute="trailing" constant="16" id="Cl2-TN-kmB"/>
+                            <constraint firstItem="cSu-dj-LLA" firstAttribute="top" secondItem="Ywe-aQ-f58" secondAttribute="bottom" constant="8" id="DyC-NQ-bYK"/>
+                            <constraint firstAttribute="trailing" secondItem="Ywe-aQ-f58" secondAttribute="trailing" constant="16" id="GWi-Su-QR8"/>
+                            <constraint firstItem="cSu-dj-LLA" firstAttribute="top" secondItem="133-9W-nIY" secondAttribute="bottom" constant="8" id="jwv-La-ECn"/>
+                            <constraint firstItem="H1N-PG-s2T" firstAttribute="top" secondItem="2rT-jX-cbW" secondAttribute="bottom" constant="8" id="nIn-aV-TbO"/>
+                            <constraint firstItem="654-8s-aDo" firstAttribute="top" secondItem="2rT-jX-cbW" secondAttribute="bottom" constant="8" id="nRl-A7-fSW"/>
+                            <constraint firstItem="HmY-9W-DIB" firstAttribute="leading" secondItem="133-9W-nIY" secondAttribute="trailing" constant="8" id="qHU-6Z-0dK"/>
+                            <constraint firstItem="cSu-dj-LLA" firstAttribute="top" secondItem="HmY-9W-DIB" secondAttribute="bottom" constant="8" id="yo7-Io-7v2"/>
+                            <constraint firstItem="133-9W-nIY" firstAttribute="top" secondItem="2rT-jX-cbW" secondAttribute="bottom" constant="8" id="z3i-pt-IRR"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="70"/>
+                    <connections>
+                        <outlet property="Label" destination="H1N-PG-s2T" id="ok2-Ra-iUL"/>
+                        <outlet property="autoButton" destination="HmY-9W-DIB" id="nkS-hk-qCM"/>
+                        <outlet property="colorView" destination="133-9W-nIY" id="vCX-Qc-8TE"/>
+                        <outlet property="offButton" destination="Ywe-aQ-f58" id="s1x-pK-aCu"/>
+                        <outlet property="typeLabel" destination="654-8s-aDo" id="X6O-V1-9Ci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="179"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
